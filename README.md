@@ -1,0 +1,2 @@
+# zetashort
+🔗 An URL shortener.

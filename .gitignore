@@ -3,3 +3,6 @@ node_modules
 
 # Tsup output
 dist
+
+# Secrets
+.env

@@ -5,9 +5,8 @@
     width='250'
     height='250'
   />
-
   <br />
-
+  <br />
   <p>
     <img
       alt="GitHub top language"
@@ -30,7 +29,9 @@
   </p>
 </div>
 
-> 🔗 An URL shortener.
+---
+
+> 🔗 An URL shortener. A simple and reliable solution for users + url shortening.
 
 > [!IMPORTANT]
 > 🚧 Work in progress
@@ -59,6 +60,45 @@ pnpm start
 ```
 
 ### Usage
+
+Here's a quick walkthrough:
+
+Want to see a hello world?
+
+```bash
+> GET /v1
+```
+
+Want to create a user?
+
+```bash
+# body { username: string, password: string }
+> POST /v1/users -> Token and expiresIn
+```
+
+Want to find a specific user?
+
+```bash
+> GET /v1/users/:userId -> User
+> GET /v1/users/:username -> User
+```
+
+Want to list all the stored users? (authorization required)
+
+```bash
+# authorization: bearer {token}
+> GET /v1/users -> Users list
+```
+
+### About the solution
+
+Why did you choose node/typescript?
+
+> I choose node/typescript because i am familiar with it. Patterns, Node, Typescript, PNPM, Express, Prisma, etc. In the future, i may create some similar solution with Golang.
+
+Which dbms did you choose? Why? Did you consider using NoSQL?
+
+> I also choose PostgreSQL ([bitnami/postgresql](https://hub.docker.com/r/bitnami/postgresql)) because of my familiarity with it. Sincerely, I didn't consider using a NoSQL database, but i would strongly recommend them because of their flexibility and performance.
 
 ## 💪 How to contribute
 
